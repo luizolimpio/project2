@@ -1,0 +1,16 @@
+{% load i18n lfs_tags %}
+
+<div class="cart-novo">
+
+    <div class="carrinho-top">
+        <a href="{% url 'lfs_cart' %}"><span class="glyphicon glyphicon-shopping-cart"></span></a>
+        {% if amount_of_items_int %}
+            <div class="quant">
+                {% blocktrans with amount=amount_of_items_locale count counter=amount_of_items_int %}{{ amount }} {% plural %}{{ amount }} {% endblocktrans %}
+            </div>
+        {%  endif %}
+    </div>
+
+    <div class="carrinho-topo-valor"><div class=""><span class="valor"><span class="moeda">R$</span><span class="decimal">{{ decimal }}</span><span class="virgula">,</span><span class="centavos">{{ centavos }}</span></span></div></div>
+
+</div>

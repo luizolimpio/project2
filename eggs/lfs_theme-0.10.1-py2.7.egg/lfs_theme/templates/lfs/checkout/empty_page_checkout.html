@@ -1,0 +1,25 @@
+{% extends "lfs/base.html" %}
+{% load i18n lfs_tags %}
+
+{% block title %}
+    {% trans 'Checkout' %} - {{ block.super }}
+{% endblock %}
+
+{% block section %}checkout{% endblock %}
+
+{% block breadcrumbs %}
+    {% breadcrumbs _("Checkout") %}
+{% endblock %}
+
+{% block content %}
+    <div>
+        <h3>
+            {% trans 'There is nothing to checkout' %}
+        </h3>
+    </div>
+
+    <div>
+        <a class="btn btn-success" href="{{shopping_url}}">{% trans 'Go on shopping' %}</a>
+    </div>
+    
+{% endblock %}

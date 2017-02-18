@@ -1,0 +1,206 @@
+{% load static compress i18n socialaccount account%}
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="pt-BR" ng-app="Compre Sem Fila!">
+
+<!-- Mirrored from www.kabumtogo.com.br/cgi-local/site/principal/cep.cgi by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 27 Jan 2017 01:11:00 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <title>Compre Sem Fila - Fazer compras nunca foi tão fácil!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="language" content="pt-br"/>
+    <meta name="resource-type" content="document"/>
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta name="revisit-after" content="1"/>
+    <meta name="robots" content="ALL"/>
+    <meta name="distribution" content="Global"/>
+    <meta name="rating" content="General"/>
+    <meta name="author" content="Grupo Compre Sem Fila!"/>
+    <meta name="title" content="Compre Sem Fila - Fazer compras nunca foi tão fácil!"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <meta name="theme-color" content="#16518D"/>
+
+    <link rel="stylesheet" href={% static "pageinicio/css/swiss.css" %}>
+    <link rel="stylesheet" href={% static "pageinicio/css/swiper.css" %}>
+    <link rel="stylesheet" href={% static "pageinicio/css/material.css" %}>
+    <link rel="stylesheet" href={% static "pageinicio/css/kabum-togo.css" %}>
+    <link rel="stylesheet" href={% static "pageinicio/css/easyzoom.css" %}>
+    <link rel="stylesheet" href={% static "pageinicio/css/home.css" %}>
+    <link rel="stylesheet" href={% static "pageinicio/css/dialog-polyfill.css" %}>
+    <link rel="stylesheet" href={% static "pageinicio/css/angucomplete-alt.css" %}>
+    <link rel="stylesheet" href={% static "pageinicio/css/tooltip-theme-arrows.css" %}>
+    <link rel="stylesheet" href={% static "pageinicio/css/rzslider.css" %}>
+    <link rel="stylesheet" href={% static "pageinicio/css/cep.css" %}>
+
+    <link rel="icon" href={% static "pageinicio/img/favicon.ico" %}>
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="{% static 'pageinicio/img/favicon.ico' %}">
+    <meta name="theme-color" content="#ffffff">
+
+
+        <script type="text/javascript" src="{{ STATIC_URL }}lfs/bower_components/jquery/dist/jquery.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}lfs/bower_components/jquery-ui/jquery-ui.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}lfs/bower_components/jquery-form/jquery.form.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}lfs/bower_components/jgrowl/jquery.jgrowl.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}lfs/bower_components/jquery-cookie/jquery.cookie.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}lfs_theme/bower_components/fancybox/source/jquery.fancybox.pack.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}lfs/pageinicio/lfs.js"></script>
+
+
+
+
+
+</head>
+<body>
+
+
+<div class="body" ng-controller="Ctrl">
+    <div class="se-pre-con"></div>
+    <div class="alert-box success"><p></p></div>
+    <div class="alert-box failure"><p></p></div>
+    <div class="alert-box warning"><p></p></div>
+
+    <div class="kbtg-topo">
+    <div class="kbtg-topo-inner">
+        <div class="kbtg-topo-menu" id="kbtg-topo-menu">
+    <div class="kbtg-topo-menu-svg">
+        <input type="checkbox" id="menu">
+        <label for="menu" onclick></label>
+        <nav role="off-canvas"
+             tg-login-menu
+             data-minhaconta="https://www.kabumtogo.com.br/cgi-local/site/minha_conta/minha_conta.cgi"
+             data-meuspedidos="https://www.kabumtogo.com.br/cgi-local/site/minha_conta/minha_conta.cgi#/meus-pedidos"
+             data-minhaslistas="https://www.kabumtogo.com.br/cgi-local/site/minha_conta/minha_conta.cgi#/meus-favoritos"
+             data-login="https://www.kabumtogo.com.br/cgi-local/site/login/login_sem_cep.cgi"
+             data-logout="https://www.kabumtogo.com.br/cgi-local/site/login/login.cgi?funcao=sair">
+
+            <div class="topo">
+                <label for="menu" onclick=""></label>
+                <div class="ola-usuario ng-binding">
+                    {% if not user.is_authenticated %}
+                        Olá, Visitante!
+                    {% else %}
+                        Olá, {{ user.username }}
+                    {% endif %}
+                </div>
+                {% if user.is_authenticated %}
+                    <div class="sair ng-hide" ng-show="logged"><a href="{% url 'lfs_logout' %}">Sair</a></div>
+                {% endif %}
+
+            </div>
+
+            {% if not user.is_authenticated %}
+                <ul class="menu-itens">
+                    <li><a href="{% block blocolinkmenu %}{% url 'lfs_login_pageinicial' %}{% endblock %}">Entrar</a></li>
+                </ul>
+            {% else %}
+                <ul class="menu-itens">
+                    <li><a href="#">{{ user.username }}</a></li>
+                </ul>
+            {% endif %}
+
+
+
+        </nav>
+    </div>
+</div>
+
+
+        <div class="kbtg-logotipo-ctn kbtg-cep">
+            {% if fotoperfil %}
+                <img class="foto-perfil2" src="{{ fotoperfil }}"/>
+            {% endif %}
+            <div class="kbtg-logotipo">
+                <a href="{% block conteudolink %}{% url 'lfs_shop_home' %}{% endblock %}"><img class="paginainicial-logo" src='{% static 'pageinicio/img/logo_compresemfila.png' %}' alt="Compre_Sem_Fila"/></a>
+            </div>
+        </div>
+
+
+        <div class="kbtg-login kbtg-cep">
+            {% if fotoperfil %}
+                <img class="foto-perfil1" src="{{ fotoperfil }}"/>
+            {% endif %}
+            <div class="kbtg-cep kbtg-cep-login"><p>
+                {% if not user.is_authenticated %}
+                    Faça seu
+                {% else %}
+                    {{ user.username }}
+                {% endif %}
+            </p>
+                {% if not user.is_authenticated %}
+                    <a href="{% url 'lfs_login_pageinicial' %}"><span>Entrar</span></a></div>
+                    {% else %}
+                    <a href="{% url 'lfs_logout' %}"><span>Sair</span></a></div>
+                {% endif %}
+
+        </div>
+    </div>
+</div>
+
+
+    
+
+    <div class="kbtg-meio">
+        <section id="body-scroll-element" class="kbtg-conteudo" du-scroll-container>
+            
+
+            <section class="kbtg-bg-inicial" style="background-image: url({% static 'pageinicio/img/bg-inicial.jpg'%})">
+    {% block conteudoparalogin %}
+        <div class="bloco">
+            <header>
+                <h1>Bem vindo ao Compre Sem Fila!</h1>
+                <small>Fazer compras de Supermercado nunca foi tao fácil!</small>
+            </header>
+
+            <p>{% block cidade %}Cidades Disponiveis!{% endblock %}</p>
+            <div class="bloco-cidade">
+                {% block conteudo %}{% endblock %}
+            </div>
+
+        </div>
+
+    {% endblock %}
+</section>
+
+<footer class="kbtg-rodape">
+    <div class="kbtg-rodape-superior">
+        <div class="kbtg-rodape-superior-inner">
+
+        </div>
+    </div>
+    <div class="kbtg-rodape-inferior">
+        <div class="kbtg-rodape-inferior-inner">
+            <div class="kbtg-rodape-coluna">
+                <h4>Institucional</h4>
+                <ul class="lista">
+                    <li><a href="#">Sobre o Compre Sem Fila!</a></li>
+                    <li><a href="#">Polticas do site</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="kbtg-rodape-informacoes">
+        <div class="kbtg-rodape-informacoes-inner">
+            <div>
+                Atendimento: (079) 9-9872-0081 Fale com o dono: (079) 9-9965-4384 (079) 9-9943-8361 © 2015 - 2016 COMPRE SEM FILA 04.901.621/0001-05 — Todos os direitos reservado Desenvolvido por Luiz Olimpio
+            </div>
+        </div>
+    </div>
+</footer>
+
+        </section>
+
+    </div>
+
+</div>
+</body>
+</html>
+

@@ -1,0 +1,81 @@
+{% extends "manage/manage_base.html" %}
+{% load i18n %}
+{% load lfs_tags lfs_manage_tags %}
+
+{% block help_link %}user/management/marketing/topseller.html{% endblock %}
+
+{% block section %}manage-product{% endblock %}
+
+{% block left-slot-wrapper %}{% endblock %}
+
+{% block title %}ReplaceBusca{% endblock %}
+
+{% block content %}
+
+
+    <div id="product">
+        <div id="manage-tabs">
+            <ul>
+                <li class="ui-tabs-nav-item"><a href="#topseller">{% trans 'Replace Busca' %}</a></li>
+            </ul>
+
+            <div id="topseller">
+                 <form method="post">
+                    {% csrf_token %}
+                    <table>
+                        <form action="." method="post">
+                            {% csrf_token %}
+                            {{ form.non_field_errors }}
+                            <div class="form-row label-block input-text">
+                                <label for="{{ form.termo.id_for_label }}">{{ form.termo.label }}</label>
+                                {{ form.termo.errors }}
+                                {{ form.termo }}
+                            </div>
+                            <div class="form-row label-block input-text">
+                                <label for="{{ form.novotermo.id_for_label }}">{{ form.novotermo.label }}</label>
+                                {{ form.novotermo.errors }}
+                                {{ form.novotermo }}
+                            </div>
+                            <p class="btn-row"><input type="submit" value="Salvar!"/></p>
+                        </form>
+                    </table>
+                </form>
+             <table class="lfs-manage-table lfs-table-replacebusca">
+                    <tr class="manage-replace-th">
+                        <th>
+                            Termo
+                        </th>
+                        <th>
+                            Novo Termo
+                        </th>
+                        <th>
+                            Excluir
+                        </th>
+                    </tr>
+            {% for replace in replaces %}
+                    <tr>
+                    <td>
+                        <div>
+                            <a href="{{ replace.url_update }}"><p class="manage-replace-paragrafo">{{ replace.termo }}</p></a>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <a href="{{ replace.url_update }}"><p class="manage-replace-paragrafo">{{ replace.novotermo }}</p></a>
+                        </div>
+                    </td>
+
+                    <td>
+                        <div>
+                            <a href="{{ replace.url_delete }}"><p class="manage-replace-delete">EXCLUIR</p></a>
+                        </div>
+                    </td>
+
+                    </tr>
+             {% endfor %}
+            </table>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

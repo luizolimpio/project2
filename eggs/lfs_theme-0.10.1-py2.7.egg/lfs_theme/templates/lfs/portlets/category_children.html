@@ -1,0 +1,16 @@
+{% load lfs_tags %}
+{% if categories %}
+    <ul class="cd-secondary-dropdown is-hidden">
+
+        {% for category in categories %}
+
+
+            <li class="has-children">
+                <a
+                   href="{{ category.category.get_absolute_url }}">
+                    {{ category.category.name }}
+                </a>
+            </li>    
+        {% endfor %}
+    </ul>    
+{% endif %}

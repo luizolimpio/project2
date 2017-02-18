@@ -1,0 +1,10 @@
+{% load i18n %}
+
+
+{% for tab in tabs %}
+    <li  {% if tab.selected %}class="selected"{% endif %}>
+        <a href="{{ tab.link }}">
+            {{ tab.title }}
+        </a>
+    </li>
+{% endfor %}

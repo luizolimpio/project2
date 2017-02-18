@@ -1,0 +1,250 @@
+{% load i18n lfs_tags lfs_theme_tags lfs_portlets_tags compress %}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+    <head>
+        <title>{% block title %}{{ SHOP.get_meta_title }}{% endblock %}</title>
+        <link rel="shortcut icon" href="{{ STATIC_URL }}favicon.ico" type="image/ico" />
+
+        {% block head %}{% endblock %}
+        <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+        <meta name="generator" content="LFS - http://www.getlfs.com" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+        <meta name="theme-color" content="#518ec7"/>
+
+            <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}lfs_theme/bower_components/fancybox/source/jquery.fancybox.css" />
+            <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}lfs/bower_components/jquery-ui/themes/smoothness/jquery-ui.css" />
+            <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}lfs/bower_components/jgrowl/jquery.jgrowl.css" />
+            <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}yui/reset-fonts.css">
+            <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/bootstrap/bootstrap.min.css" />
+            <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/main.css" />
+            <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}partials/style.css">
+            <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/man-mob.css" />
+
+        <style>
+            .no-js #loader { display: none;  }
+            .js #loader { display: block; position: absolute; left: 100px; top: 0; }
+            a.back-to-top {
+                display: none;
+                width: 72px;
+                height: 71px;
+                text-indent: -9999px;
+                position: fixed;
+                z-index: 999;
+                right: 10px;
+                bottom: 10px;
+                background: url({{ STATIC_URL }}img/topo.png) no-repeat;
+            }
+        </style>
+
+        <!--[if IE]>
+            {% compress css %}
+                <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/iefixes.css" />
+            {% endcompress %}
+        <![endif]-->
+
+    </head>
+    <body class="{% block section %}lfs{% endblock %}">
+        <a href="#" class="back-to-top">Back to Top</a>
+        <div class="se-pre-con"></div>
+        <div class="alert-box success"><p></p></div>
+        <div class="alert-box failure"><p></p></div>
+        <div class="alert-box warning"><p></p></div>
+        <div id="header" class="search-jquery">
+            <div class="container">
+                {% block header %}
+
+                    <div>
+                    <nav class="navbar navbar-inverse">
+                        <button class="navbar-toggle"  type="button" data-target=".navbar-collapse" data-toggle="collapse">Menu</button>
+                        <div class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav text-center">
+                            {% if user.is_authenticated %}
+                                <li>
+                                    <a href="{% url 'lfs_logout' %}">{% trans 'Logout' %}</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'lfs_my_account' %}">{% trans 'My account' %}</a>
+                                </li>
+                            {% if user.first_name %}
+                                <li>
+                                    <a href="#">{{ user.first_name }} {{user.last_name}}</a>
+                                </li>
+
+                            {% else %}
+                                <li>
+                                    <a href="#">{{ user.username }}</a>
+                                </li>
+
+                            {% endif %}
+
+                            {% if user.is_superuser %}
+                                {% if category %}
+                                    <li>
+                                        <a href="{% url 'lfs_manage_category' category.id %}">{% trans 'Manage' %}</a>
+                                    </li>
+                                {% endif %}
+                                {% if product %}
+                                    <li>
+                                        <a href="{% url 'lfs_manage_product' product.id %}">{% trans 'Manage' %}</a>
+                                    </li>
+                                {% endif %}
+                                {% if page %}
+                                    <li>
+                                        <a href="{% url 'lfs_manage_page' page.id %}">{% trans 'Manage' %}</a>
+                                    </li>
+                                {% endif %}
+                                {% if not category and not product and not page %}
+                                    <li>
+                                        <a href="{% url 'lfs_manage_dashboard' %}">{% trans 'Manage' %}</a>
+                                    </li>
+                                {% endif %}
+                            {% endif %}
+                            {% else %}
+                                {% if not ANON_ONLY %}
+                                    <li>
+                                        <a href="{% url 'lfs_login' %}">{% trans 'Login' %}</a>
+                                    </li>
+                                {% endif %}
+
+                            {% endif %}
+                            {% block tabs %}
+                                {% tabs %}
+                            {% endblock %}
+                            <form method="get" action="{% url 'lfs_shop_home' %}">
+                                <li class="btn-group">
+                                    <button class="btn btn-primary botaocidade" type="submit">Cidade</button>
+                                    <button class="btn btn-danger" type="submit">Altera</button>
+                                </li>
+                            </form>
+                        </ul>
+                        </div>
+                    </nav>
+                    </div>
+                    <div class="thumbnail header-superior">
+                        <div class="glyphicon glyphicon-search"></div>
+                        <div class="logo">
+                            <a href="{% url 'lfs_shop_view' %}">
+                                <img class="logo"
+                                     src="{{ STATIC_URL }}img/logo_compresemfila.png"
+                                     alt="Logo" />
+                            </a>
+                        </div>
+                        <div class="span-18 search last search2">
+
+                            <form id="search-form"
+                                  action="{% url 'lfs_search' %}"
+                                  autocomplete="off">
+                                <div id="divBusca">
+                                    <input type="hidden" name="livesearch" value="1" />
+                                    <div class="btn-group">
+                                        <input id="search-input txtBusca" class="search-input" autofocus placeholder="Busca de produtos..." value="{{ q }}" type="text" name="q" autocomplete="off" data-url="{% url 'lfs_livesearch' %}" />
+                                        <input type="image" src="{{ STATIC_URL }}img/busca.jpg" alt="submit" id="btnBusca" />
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        {% block right-slot %}
+                            {% lfs_portlet_slot 'Right' %}
+                        {% endblock %}
+
+                    </div>
+
+                {% endblock %}
+            </div>
+            <div class="container livesearch-wrapper">
+                 <div class="livesearch-result" id="livesearch-result"></div>
+            </div>
+        </div>
+
+
+
+
+
+        <div id="content">
+            <div id="breadcrumbs">
+                <div class="container">
+                    {% block breadcrumbs %}{% endblock %}
+                </div>
+            </div>
+            <div class="container">
+                {% slots_information %}
+
+                {% block wrapper %}
+                    {% block left-slot-wrapper %}
+                        {% if SlotLeft %}
+                            <div class="span-5">
+                                <div class="left-slot">
+                                    {% block left-slot %}
+                                        {% lfs_portlet_slot 'Left' %}
+                                    {% endblock %}
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endblock %}
+                    <div class="{{ content_class }}">
+                        <div class="middle-slot">
+                            {% block content %}{% endblock %}
+                        </div>
+                    </div>
+                    {% block right-slot-wrapper %}
+                        {% if SlotRight %}
+                            <div class="span-4 last">
+                                <div class="right-slot">
+
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endblock %}
+                {% endblock %}
+            </div>
+        </div>
+
+        <div id="footer">
+            <div class="container">
+                <div class="footer-inner">
+                    {% block footer %}
+                        {% actions Footer %}
+                        {% for action in actions %}
+                            <a href="{{ action.link }}">{{ action.title }}</a>
+                            {% if not forloop.last %}|{% endif %}
+                        {% endfor %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+
+        <div id="colophon">
+            <div class="container">
+                <div class="thumbnail colophon-inner">
+                    {% block colophon %}
+
+                        <div class="contato-rodape">
+                            <p>Atendimento:</p>
+                            <p class="contato-rodape-tel">(079) 9-9872-0081</p>
+                            <p>Fale com o dono:</p>
+                            <p class="contato-rod">(079) 9-9965-4384</p>
+                            <p class="contato-rod">(079) 9-9943-8361</p>
+                        </div>
+                        <p>
+                            &copy; 2015 - 2016 COMPRE SEM FILA 04.901.621/0001-05 &mdash; {% trans 'All rights reserved' %}
+                        </p>
+                        <p>{% trans 'Desenvolvido por' %} Luiz Olimpio</p>
+
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+            <script type="text/javascript" src="{{ STATIC_URL }}lfs/bower_components/jquery/dist/jquery.js"></script>
+            <script type="text/javascript" src="{{ STATIC_URL }}lfs/bower_components/jquery-ui/jquery-ui.js"></script>
+            <script type="text/javascript" src="{{ STATIC_URL }}lfs/bower_components/jquery-form/jquery.form.js"></script>
+            <script type="text/javascript" src="{{ STATIC_URL }}lfs/bower_components/jgrowl/jquery.jgrowl.js"></script>
+            <script type="text/javascript" src="{{ STATIC_URL }}lfs/bower_components/jquery-cookie/jquery.cookie.js"></script>
+            <script type="text/javascript" src="{{ STATIC_URL }}lfs_theme/bower_components/fancybox/source/jquery.fancybox.pack.js"></script>
+            <script type="text/javascript" src="{{ STATIC_URL }}lfs/js/bootstrap.min.js"></script>
+            <script type="text/javascript" src="{{ STATIC_URL }}lfs/js/modernizr.js"></script>
+            <script type="text/javascript" src="{{ STATIC_URL }}lfs/js/jquery.menu-aim.js"></script>
+            <script type="text/javascript" src="{{ STATIC_URL }}lfs/js/main.js"></script>
+            <script type="text/javascript" src="{{ STATIC_URL }}lfs/js/lfs.js"></script>
+    </body>
+
+</html>

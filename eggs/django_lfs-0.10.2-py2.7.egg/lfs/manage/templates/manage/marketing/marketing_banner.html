@@ -1,0 +1,90 @@
+{% extends "manage/manage_base.html" %}
+{% load i18n %}
+{% load lfs_tags lfs_manage_tags %}
+
+{% block help_link %}user/management/marketing/topseller.html{% endblock %}
+
+{% block section %}manage-product{% endblock %}
+
+{% block left-slot-wrapper %}{% endblock %}
+
+{% block title %}Banner{% endblock %}
+
+{% block content %}
+
+
+    <div id="product">
+        <div id="manage-tabs">
+            <ul>
+                <li class="ui-tabs-nav-item"><a href="#topseller">{% trans 'Banner' %}</a></li>
+            </ul>
+
+            <div id="topseller">
+                 <form method="post">
+                    {% csrf_token %}
+                    <table>
+                        <form action="." method="post">
+                            {% csrf_token %}
+                            {{ form.non_field_errors }}
+                            <div class="form-row label-block input-text">
+                                <label for="{{ form.imagem.id_for_label }}">{{ form.imagem.label }}</label>
+                                {{ form.imagem.errors }}
+                                {{ form.imagem }}
+                            </div>
+                            <div class="form-row label-block input-text">
+                                <label for="{{ form.link.id_for_label }}">{{ form.link.label }}</label>
+                                {{ form.link.errors }}
+                                {{ form.link }}
+                            </div>
+                            <div class="form-row label-block input-text">
+                                <label for="{{ form.ativo.id_for_label }}">{{ form.ativo.label }}</label>
+                                {{ form.ativo.errors }}
+                                {{ form.ativo }}
+                            </div>
+                            <div class="form-row label-block input-text">
+                                <label for="{{ form.phone.id_for_label }}">{{ form.phone.label }}</label>
+                                {{ form.phone.errors }}
+                                {{ form.phone }}
+                            </div>
+                            <p class="btn-row"><input type="submit" value="Salvar!"/></p>
+                        </form>
+                    </table>
+                </form>
+            {% for banner in banners %}
+                <table>
+                    <tr>
+                    <td>
+                        <div>
+                            <a href="{{ banner.url_update }}"><img class="manage-banner-miniatura" src="{{ banner.imagem }}"></a>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <a href="{{ banner.url_update }}"><p class="manage-banner-paragrafo">{{ banner.link }}</p></a>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <a href="{{ banner.url_update }}"><p class="manage-banner-paragrafo">
+                                {% if  banner.ativo == True %}
+                                    Ativo
+                                {% else %}
+                                    Desativado
+                                {% endif %}
+
+                            </p></a>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <a href="{{ banner.url_delete }}"><p class="manage-banner-delete">EXCLUIR</p></a>
+                        </div>
+                    </td>
+
+                    </tr>
+                </table>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

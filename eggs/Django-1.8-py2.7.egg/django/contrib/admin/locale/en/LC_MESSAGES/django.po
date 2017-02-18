@@ -1,0 +1,839 @@
+# This file is distributed under the same license as the Django package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Django\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-04 12:35+0000\n"
+"PO-Revision-Date: 2010-05-13 15:35+0200\n"
+"Last-Translator: Django team\n"
+"Language-Team: English <en@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/actions.py:50
+#, python-format
+msgid "Successfully deleted %(count)d %(items)s."
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/actions.py:62
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/options.py:1723
+#, python-format
+msgid "Cannot delete %(name)s"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/actions.py:64
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/options.py:1725
+msgid "Are you sure?"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/actions.py:88
+#, python-format
+msgid "Delete selected %(verbose_name_plural)s"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/apps.py:11
+msgid "Administration"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/filters.py:107
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/filters.py:205
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/filters.py:245
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/filters.py:282
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/filters.py:398
+msgid "All"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/filters.py:246
+msgid "Yes"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/filters.py:247
+msgid "No"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/filters.py:261
+msgid "Unknown"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/filters.py:321
+msgid "Any date"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/filters.py:322
+msgid "Today"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/filters.py:326
+msgid "Past 7 days"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/filters.py:330
+msgid "This month"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/filters.py:334
+msgid "This year"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/forms.py:13
+#, python-format
+msgid ""
+"Please enter the correct %(username)s and password for a staff account. Note "
+"that both fields may be case-sensitive."
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/helpers.py:28
+msgid "Action:"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/models.py:29
+msgid "action time"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/models.py:32
+msgid "object id"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/models.py:33
+msgid "object repr"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/models.py:34
+msgid "action flag"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/models.py:35
+msgid "change message"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/models.py:40
+msgid "log entry"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/models.py:41
+msgid "log entries"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/models.py:50
+#, python-format
+msgid "Added \"%(object)s\"."
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/models.py:52
+#, python-format
+msgid "Changed \"%(object)s\" - %(changes)s"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/models.py:57
+#, python-format
+msgid "Deleted \"%(object)s.\""
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/models.py:59
+msgid "LogEntry Object"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/options.py:229
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/options.py:258
+msgid "None"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/options.py:294
+msgid ""
+"Hold down \"Control\", or \"Command\" on a Mac, to select more than one."
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/options.py:1022
+#, python-format
+msgid "Changed %s."
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/options.py:1022
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/options.py:1032
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/options.py:1932
+msgid "and"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/options.py:1027
+#, python-format
+msgid "Added %(name)s \"%(object)s\"."
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/options.py:1031
+#, python-format
+msgid "Changed %(list)s for %(name)s \"%(object)s\"."
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/options.py:1036
+#, python-format
+msgid "Deleted %(name)s \"%(object)s\"."
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/options.py:1040
+msgid "No fields changed."
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/options.py:1166
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/options.py:1222
+#, python-format
+msgid ""
+"The %(name)s \"%(obj)s\" was added successfully. You may edit it again below."
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/options.py:1180
+#, python-format
+msgid ""
+"The %(name)s \"%(obj)s\" was added successfully. You may add another "
+"%(name)s below."
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/options.py:1187
+#, python-format
+msgid "The %(name)s \"%(obj)s\" was added successfully."
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/options.py:1215
+#, python-format
+msgid ""
+"The %(name)s \"%(obj)s\" was changed successfully. You may edit it again "
+"below."
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/options.py:1232
+#, python-format
+msgid ""
+"The %(name)s \"%(obj)s\" was changed successfully. You may add another "
+"%(name)s below."
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/options.py:1241
+#, python-format
+msgid "The %(name)s \"%(obj)s\" was changed successfully."
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/options.py:1324
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/options.py:1580
+msgid ""
+"Items must be selected in order to perform actions on them. No items have "
+"been changed."
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/options.py:1343
+msgid "No action selected."
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/options.py:1361
+#, python-format
+msgid "The %(name)s \"%(obj)s\" was deleted successfully."
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/options.py:1448
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/options.py:1698
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/options.py:1754
+#, python-format
+msgid "%(name)s object with primary key %(key)r does not exist."
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/options.py:1498
+#, python-format
+msgid "Add %s"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/options.py:1498
+#, python-format
+msgid "Change %s"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/options.py:1559
+msgid "Database error"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/options.py:1622
+#, python-format
+msgid "%(count)s %(name)s was changed successfully."
+msgid_plural "%(count)s %(name)s were changed successfully."
+msgstr[0] ""
+msgstr[1] ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/options.py:1649
+#, python-format
+msgid "%(total_count)s selected"
+msgid_plural "All %(total_count)s selected"
+msgstr[0] ""
+msgstr[1] ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/options.py:1655
+#, python-format
+msgid "0 of %(cnt)s selected"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/options.py:1771
+#, python-format
+msgid "Change history: %s"
+msgstr ""
+
+#. Translators: Model verbose name and instance representation,
+#. suitable to be an item in a list.
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/options.py:1926
+#, python-format
+msgid "%(class_name)s %(instance)s"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/options.py:1933
+#, python-format
+msgid ""
+"Deleting %(class_name)s %(instance)s would require deleting the following "
+"protected related objects: %(related_objects)s"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/sites.py:40
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/base_site.html:3
+msgid "Django site admin"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/sites.py:43
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/base_site.html:6
+msgid "Django administration"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/sites.py:46
+msgid "Site administration"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/sites.py:380
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/login.html:49
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/registration/password_reset_complete.html:18
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/tests.py:113
+msgid "Log in"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/sites.py:512
+#, python-format
+msgid "%(app)s administration"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/404.html:4
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/404.html:8
+msgid "Page not found"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/404.html:10
+msgid "We're sorry, but the requested page could not be found."
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/500.html:6
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/app_index.html:9
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/auth/user/change_password.html:13
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/base.html:58
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/change_form.html:18
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/change_list.html:40
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/delete_confirmation.html:8
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/delete_selected_confirmation.html:8
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/invalid_setup.html:6
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/object_history.html:6
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/registration/logged_out.html:4
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/registration/password_change_done.html:6
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/registration/password_change_form.html:7
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/registration/password_reset_complete.html:6
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/registration/password_reset_confirm.html:6
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/registration/password_reset_done.html:6
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/registration/password_reset_form.html:6
+msgid "Home"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/500.html:7
+msgid "Server error"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/500.html:11
+msgid "Server error (500)"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/500.html:14
+msgid "Server Error <em>(500)</em>"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/500.html:15
+msgid ""
+"There's been an error. It's been reported to the site administrators via "
+"email and should be fixed shortly. Thanks for your patience."
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/actions.html:4
+msgid "Run the selected action"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/actions.html:4
+msgid "Go"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/actions.html:11
+msgid "Click here to select the objects across all pages"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/actions.html:11
+#, python-format
+msgid "Select all %(total_count)s %(module_name)s"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/actions.html:13
+msgid "Clear selection"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/auth/user/add_form.html:6
+msgid ""
+"First, enter a username and password. Then, you'll be able to edit more user "
+"options."
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/auth/user/add_form.html:8
+msgid "Enter a username and password."
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/auth/user/change_password.html:17
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/auth/user/change_password.html:54
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/base.html:46
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/registration/password_change_done.html:3
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/registration/password_change_form.html:4
+msgid "Change password"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/auth/user/change_password.html:27
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/change_form.html:47
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/change_list.html:67
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/login.html:19
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/registration/password_change_form.html:21
+msgid "Please correct the error below."
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/auth/user/change_password.html:27
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/change_form.html:47
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/change_list.html:67
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/login.html:19
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/registration/password_change_form.html:21
+msgid "Please correct the errors below."
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/auth/user/change_password.html:31
+#, python-format
+msgid "Enter a new password for the user <strong>%(username)s</strong>."
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/base.html:32
+msgid "Welcome,"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/base.html:37
+msgid "View site"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/base.html:42
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/registration/password_change_done.html:3
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/registration/password_change_form.html:4
+msgid "Documentation"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/base.html:48
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/registration/password_change_done.html:3
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/registration/password_change_form.html:4
+msgid "Log out"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/change_form.html:21
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/index.html:31
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/related_widget_wrapper.html:18
+msgid "Add"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/change_form.html:33
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/object_history.html:10
+msgid "History"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/change_form.html:35
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/edit_inline/stacked.html:10
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/edit_inline/tabular.html:33
+msgid "View on site"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/change_list.html:58
+#, python-format
+msgid "Add %(name)s"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/change_list.html:78
+msgid "Filter"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/change_list_results.html:17
+msgid "Remove from sorting"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/change_list_results.html:18
+#, python-format
+msgid "Sorting priority: %(priority_number)s"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/change_list_results.html:19
+msgid "Toggle sorting"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/delete_confirmation.html:12
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/related_widget_wrapper.html:26
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/submit_line.html:6
+msgid "Delete"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/delete_confirmation.html:18
+#, python-format
+msgid ""
+"Deleting the %(object_name)s '%(escaped_object)s' would result in deleting "
+"related objects, but your account doesn't have permission to delete the "
+"following types of objects:"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/delete_confirmation.html:25
+#, python-format
+msgid ""
+"Deleting the %(object_name)s '%(escaped_object)s' would require deleting the "
+"following protected related objects:"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/delete_confirmation.html:32
+#, python-format
+msgid ""
+"Are you sure you want to delete the %(object_name)s \"%(escaped_object)s\"? "
+"All of the following related items will be deleted:"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/delete_confirmation.html:34
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/delete_selected_confirmation.html:33
+msgid "Objects"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/delete_confirmation.html:41
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/delete_selected_confirmation.html:44
+msgid "Yes, I'm sure"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/delete_confirmation.html:42
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/delete_selected_confirmation.html:45
+msgid "No, take me back"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/delete_selected_confirmation.html:11
+msgid "Delete multiple objects"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/delete_selected_confirmation.html:17
+#, python-format
+msgid ""
+"Deleting the selected %(objects_name)s would result in deleting related "
+"objects, but your account doesn't have permission to delete the following "
+"types of objects:"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/delete_selected_confirmation.html:24
+#, python-format
+msgid ""
+"Deleting the selected %(objects_name)s would require deleting the following "
+"protected related objects:"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/delete_selected_confirmation.html:31
+#, python-format
+msgid ""
+"Are you sure you want to delete the selected %(objects_name)s? All of the "
+"following objects and their related items will be deleted:"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/edit_inline/stacked.html:8
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/edit_inline/tabular.html:31
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/index.html:37
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/related_widget_wrapper.html:10
+msgid "Change"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/edit_inline/stacked.html:27
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/edit_inline/tabular.html:81
+msgid "Remove"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/edit_inline/stacked.html:28
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/edit_inline/tabular.html:80
+#, python-format
+msgid "Add another %(verbose_name)s"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/edit_inline/tabular.html:17
+msgid "Delete?"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/filter.html:2
+#, python-format
+msgid " By %(filter_title)s "
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/includes/object_delete_summary.html:2
+msgid "Summary"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/index.html:20
+#, python-format
+msgid "Models in the %(name)s application"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/index.html:47
+msgid "You don't have permission to edit anything."
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/index.html:55
+msgid "Recent Actions"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/index.html:56
+msgid "My Actions"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/index.html:60
+msgid "None available"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/index.html:74
+msgid "Unknown content"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/invalid_setup.html:12
+msgid ""
+"Something's wrong with your database installation. Make sure the appropriate "
+"database tables have been created, and make sure the database is readable by "
+"the appropriate user."
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/login.html:45
+msgid "Forgotten your password or username?"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/object_history.html:22
+msgid "Date/time"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/object_history.html:23
+msgid "User"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/object_history.html:24
+msgid "Action"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/object_history.html:38
+msgid ""
+"This object doesn't have a change history. It probably wasn't added via this "
+"admin site."
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/pagination.html:10
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/search_form.html:9
+msgid "Show all"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/pagination.html:11
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/submit_line.html:3
+msgid "Save"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/related_widget_wrapper.html:8
+#, python-format
+msgid "Change selected %(model)s"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/related_widget_wrapper.html:16
+#, python-format
+msgid "Add another %(model)s"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/related_widget_wrapper.html:24
+#, python-format
+msgid "Delete selected %(model)s"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/search_form.html:7
+msgid "Search"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/search_form.html:9
+#, python-format
+msgid "%(counter)s result"
+msgid_plural "%(counter)s results"
+msgstr[0] ""
+msgstr[1] ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/search_form.html:9
+#, python-format
+msgid "%(full_result_count)s total"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/submit_line.html:8
+msgid "Save as new"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/submit_line.html:9
+msgid "Save and add another"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/admin/submit_line.html:10
+msgid "Save and continue editing"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/registration/logged_out.html:8
+msgid "Thanks for spending some quality time with the Web site today."
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/registration/logged_out.html:10
+msgid "Log in again"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/registration/password_change_done.html:7
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/registration/password_change_form.html:8
+msgid "Password change"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/registration/password_change_done.html:14
+msgid "Your password was changed."
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/registration/password_change_form.html:26
+msgid ""
+"Please enter your old password, for security's sake, and then enter your new "
+"password twice so we can verify you typed it in correctly."
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/registration/password_change_form.html:54
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/registration/password_reset_confirm.html:24
+msgid "Change my password"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/registration/password_reset_complete.html:7
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/registration/password_reset_done.html:7
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/registration/password_reset_form.html:7
+msgid "Password reset"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/registration/password_reset_complete.html:16
+msgid "Your password has been set.  You may go ahead and log in now."
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/registration/password_reset_confirm.html:7
+msgid "Password reset confirmation"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/registration/password_reset_confirm.html:17
+msgid ""
+"Please enter your new password twice so we can verify you typed it in "
+"correctly."
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/registration/password_reset_confirm.html:21
+msgid "New password:"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/registration/password_reset_confirm.html:23
+msgid "Confirm password:"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/registration/password_reset_confirm.html:29
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a new password reset."
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/registration/password_reset_done.html:15
+msgid ""
+"We've emailed you instructions for setting your password, if an account "
+"exists with the email you entered. You should receive them shortly."
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/registration/password_reset_done.html:17
+msgid ""
+"If you don't receive an email, please make sure you've entered the address "
+"you registered with, and check your spam folder."
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/registration/password_reset_email.html:2
+#, python-format
+msgid ""
+"You're receiving this email because you requested a password reset for your "
+"user account at %(site_name)s."
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/registration/password_reset_email.html:4
+msgid "Please go to the following page and choose a new password:"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/registration/password_reset_email.html:8
+msgid "Your username, in case you've forgotten:"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/registration/password_reset_email.html:10
+msgid "Thanks for using our site!"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/registration/password_reset_email.html:12
+#, python-format
+msgid "The %(site_name)s team"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/registration/password_reset_form.html:15
+msgid ""
+"Forgotten your password? Enter your email address below, and we'll email "
+"instructions for setting a new one."
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/registration/password_reset_form.html:19
+msgid "Email address:"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templates/registration/password_reset_form.html:19
+msgid "Reset my password"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/templatetags/admin_list.py:383
+msgid "All dates"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/views/main.py:37
+msgid "(None)"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/views/main.py:84
+#, python-format
+msgid "Select %s"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/views/main.py:86
+#, python-format
+msgid "Select %s to change"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/widgets.py:95
+msgid "Date:"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/widgets.py:96
+msgid "Time:"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/widgets.py:178
+msgid "Lookup"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/widgets.py:367
+msgid "Currently:"
+msgstr ""
+
+#: eggs/Django-1.8-py2.7.egg/django/contrib/admin/widgets.py:368
+msgid "Change:"
+msgstr ""

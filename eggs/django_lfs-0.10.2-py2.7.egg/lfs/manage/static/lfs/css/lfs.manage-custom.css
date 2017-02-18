@@ -1,0 +1,53 @@
+/*
+This file is intentionally left blank. 
+Feel free to create a custom version in your LFS theme package 
+to customize LFS management interface
+*/
+
+.manage-banner-delete:hover {
+    text-shadow: 0 0 5px black;
+    font-size: 130%;
+}
+.manage-banner-paragrafo {
+    font-size: 130%;
+    margin-left: 20px;
+}
+.form-row.label-block.input-text {
+    margin-top: 20px;
+    font-size: 130%;
+}
+.manage-banner-delete {
+    color: red;
+    font-size: 130%;
+    margin-left: 20px;
+}
+.manage-banner-miniatura{
+    width: 300px;
+    height: 100px;
+}
+.orders_total{
+    color: #ff8986;
+    text-align: center;
+    text-shadow: 1px 1px 0 #000;
+}
+.manage-replace-delete:hover {
+    text-shadow: 0 0 5px black;
+
+}
+.manage-replace-paragrafo {
+    font-size: 110%;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+.manage-replace-delete {
+    color: red;
+    font-size: 100%;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+tr.manage-replace-th th {
+    font-size: 120%;
+}
+.lfs-table-replacebusca tr:nth-child(2n+1){
+    background-color: #eee;
+}

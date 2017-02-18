@@ -1,0 +1,16 @@
+{% extends 'lfs/pageinicio/base.html' %}
+{% load static %}
+
+{% block cidade %}Estados Disponiveis!{% endblock %}
+
+{% block conteudo %}
+    {% for estado in estados %}
+
+    <div class="input-cnt">
+        <div class="group">
+            <a href="{{ estado.url_absolut }}"><button class="button" type="submit">{{ estado.nome }}</button></a>
+        </div>
+    </div>
+
+    {% endfor %}
+{% endblock %}

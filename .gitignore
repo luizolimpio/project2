@@ -1,0 +1,20 @@
+#.gitignore
+.idea/
+.installed.cfg
+.lfs/
+.postgresql.conf.swp
+CACHE/
+README.txt
+bin/
+bootstrap.py
+buildout.cfg
+#develop-eggs/
+#eggs/
+lfs.log
+lfs_project/
+sys
+zc.buildout.buildout
+gunicron_lfs_project
+System Volume Information/
+
+

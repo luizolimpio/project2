@@ -1,0 +1,223 @@
+{% extends "lfs/base.html" %}
+{% load i18n lfs_tags pagination_tags static%}
+
+
+
+{% block head %}
+    {% if SHOP.get_meta_keywords %}
+        <meta name="keywords" content="{{ SHOP.get_meta_keywords }}" />
+    {% endif %}
+    {% if SHOP.get_meta_description %}
+        <meta name="description" content="{{ SHOP.get_meta_description }}" />
+    {% endif %}
+{% endblock %}
+
+{% block breadcrumbs %}
+
+{% endblock %}
+
+{% block content %}
+
+
+
+    <!-- Start WOWSlider.com BODY section --> <!-- add to the <body> of your page -->
+
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+
+        <div class="carousel-inner">
+            {% for foto in banners %}
+                <div class="item {% if foto.len == 0 %}active{% endif %}"><a href="{{ foto.link }}"><img src="{{ foto.imagem }}" style="width:100%" alt="Slide"></a>
+                    <div class="container">
+                        <div class="carousel-caption">
+
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+
+        </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+
+    </div>
+
+    <!-- End WOWSlider.com BODY section -->
+
+
+
+    {% if products %}
+
+            {% if not paginator %}
+                    {% autopaginate products 24 %}
+            {% endif %}
+            {% paginate %}
+
+
+            <table class="lfs-default padding-top">
+                <tr>
+                    <th class="btn btn-primary">{% trans 'DESTAQUES' %}</th>
+
+                <tr>
+                <div id="products">
+        <table class="lfs-default produtos-table">
+            {% for col in products %}
+
+                    {% for product in col %}
+                        <tr class="product-row text-center col-md-2">
+                            <td class="product-data produtos">
+                                <div class="thumbnail">
+                                    <div class="product-image product-image2">
+                                        <a href="{{ product.obj.get_absolute_url }}"><img src="{{ product.obj.get_image.image.url_200x200 }}"
+                                             alt="{{ product.obj.get_name }}"
+                                             title="{{ product.obj.get_name }}" />
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a href="{{ product.obj.get_absolute_url }}"><div class="product-title product-title3">{{ product.name }}</div></a>
+                                        <div class="product-description">{{ product.obj.get_short_description|safe }}</div>
+                                    </div>
+
+                                    {% category_product_prices_gross product.obj.id %}
+
+
+
+                                <div class="product-price product-price3">
+                                    {% if price_starting_from %}
+                                        {% trans "Starting at" %}
+                                    {% endif %}
+                                    {% if product.obj.get_for_sale %}
+                                       <span class="for-sale-standard-price">{{ standard_price|currency:request }}</span>
+                                       <span class="for-sale-price">{{ price|currency:request }}</span>
+                                    {% else %}
+                                        <span class="standard-price">{{ price|currency:request }}</span>
+                                    {% endif %}
+                                    {% if product.price_unit %}
+                                        / {{ product.price_unit }}
+                                    {% endif %}
+                                    {% if product.obj.get_active_packing_unit %}
+                                        <div class="base-price">
+                                            {{ base_packing_price|currency:request }}* / {{ product.obj.get_packing_info.1 }}
+                                        </div>
+                                    {% endif %}
+                                    {% if product.obj.get_active_base_price %}
+                                        <div class="base-price">
+                                            {% if base_price_starting_from %}
+                                                {% trans "Starting at" %}
+                                            {% endif %}
+                                            {{ base_price|currency:request }}*
+                                            {% if product.obj.get_base_price_unit %}
+                                                / {{ product.obj.get_base_price_unit }}
+                                            {% endif %}
+                                        </div>
+                                    {% endif %}
+
+                                </div>
+                                {# Attachments ################}
+                                <div itemscope itemtype="http://schema.org/Product">
+                                <div id="product-form-wrapper">
+                                    <form  id="product-form"
+                                          action="{% url 'lfs_product_dispatcher' %}"
+                                          data="{% url 'lfs_select_variant_from_properties' %}"
+                                          method="post">
+                                        {% csrf_token %}
+
+                                    {% if product.obj.is_deliverable %}
+                                        <table align="right" class="buttons">
+                                            <tr>
+                                                {% if product.obj.get_active_packing_unit %}
+                                                    <td>
+                                                        <div class="product-quantity packing-unit"
+                                                            id="packing-url"
+                                                            data="{% url 'lfs_calculate_packing' product.obj.id %}">
+                                                            <input class="number quantity"
+                                                                   name="quantity"
+                                                                   size="3"
+                                                                   type="text"
+                                                                   value="{{ product.quantity }}" /> {{ product.unit }}
+                                                        </div>
+                                                    </td>
+                                                {% else %}
+                                                    <td class="product-quantity">
+                                                        <button type="button" class="button button-pill button-pill--circle button-pill--green-flat qtdProdLess">-</button>
+                                                        <input class="number quantity"
+                                                               name="quantity"
+                                                               size="3"
+                                                               type="text"
+                                                               value="{{ product.quantity }}" />
+                                                        <button type="button" class="button button-pill button-pill--circle button-pill--green-flat qtdProdPlus">+</button>
+                                                    </td>
+                                                {% endif %}
+                                                <td nowrap="nowrap">
+                                                    <!--[if IE]><input type="text" style="display: none;" disabled="disabled" » size="20" value="Ignore field. IE bug fix. LFS issue #57" /><![endif]-->
+
+                                                </td>
+                                            </tr>
+                                        </table>
+                                            <a href="#"><img class="emphasized adicionar-produto"
+                                                               src="{{ STATIC_URL }}img/bt_comprar.png"></a>
+                                        <div class="packing-result">
+                                            {{ product.packing_result }}
+                                        </div>
+                                {% else %}
+                                    <button class="emphasized"
+                                            onclick="window.location='{% url 'lfs_contact_form' %}'; return false;"
+                                            name="">{% trans 'Send request' %}</button>
+                                {% endif %}
+
+
+
+
+                                <p class="product-description">
+                                    {{ product.obj.get_description|safe}}
+                                </p>
+
+
+
+                                {# Attachments #}
+                                {% if attachments %}
+                                    <div class="attachments">
+                                        <h2 class="section">{% trans 'Attachments' %}</h2>
+                                        {% for attachment in attachments %}
+                                        <div class="item">
+                                            <div class="title">
+                                                <a title="{{ attachment.title}}" href="{{ attachment.get_url }}">
+                                                    {{ attachment.title}}
+                                                </a>
+                                            </div>
+                                            {% if attachment.description %}
+                                            <div class="description">
+                                                {{ attachment.description }}
+                                            </div>
+                                            {% endif %}
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+
+
+
+                                <input type="hidden" class="produto-id"
+                                       name="product_id"
+                                       value="{{ product.obj.id }}" />
+                            </form>
+                        </div>
+                        </div>
+                        </div>
+                <a name="reviews"></a>
+                                {# Attachments #####################}
+                            </td>
+                        </tr>
+
+
+            {% endfor %}
+
+        {% endfor %}
+        </table>
+    </div>
+
+
+        {% paginate %}
+    {% endif %}
+    {{ SHOP.description|safe }}
+{% endblock %}

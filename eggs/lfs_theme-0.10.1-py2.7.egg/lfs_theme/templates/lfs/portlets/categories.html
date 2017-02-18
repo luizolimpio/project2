@@ -1,0 +1,71 @@
+{% load i18n lfs_tags %}
+<header>
+{% if categories %}
+
+        <div class="cd-dropdown-wrapper">
+            <a class="cd-dropdown-trigger" href="#0">{{ title }}</a>
+
+            <nav class="cd-dropdown">
+            <h2>{{ title }}</h2>
+                <a href="#0" class="cd-close"></a>
+
+            <ul class="cd-dropdown-content">
+
+                {% for category in categories %}
+
+                    <li class="has-children">
+                        <a
+                           href="{{ category.category.get_absolute_url }}">
+                            {{ category.category.name }}
+                        </a>
+                        {% if category.children %}
+                            <ul class="cd-secondary-dropdown is-hidden">
+                            <li class="go-back"><a href="#0">VOLTA</a></li>
+
+                                {% for category in category.children %}
+
+
+                                    <li class="has-children">
+
+                                        <a class="menu"
+                                           href="{{ category.category.get_absolute_url }}">
+                                            <input class="botao-menu" type="image" src="{{ STATIC_URL }}img/busca.png" alt="submit"/>
+                                            <div class="nome-menu">{{ category.category.name }}</div>
+
+                                        </a>
+
+
+                                        {% if category.children %}
+                                            <ul class="is-hidden">
+                                            <li class="go-back"><a href="#0">VOLTA</a></li>
+
+                                                {% for category in category.children %}
+
+
+                                                    <li>
+                                                        <a
+                                                           href="{{ category.category.get_absolute_url }}">
+                                                            {{ category.category.name }}
+                                                        </a>
+                                                    </li>
+                                                {% endfor %}
+                                            </ul>
+                                        {% endif %}
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    </li>
+
+                {% endfor %}
+                 </ul>
+
+
+            </nav>
+        </div>
+{% endif %}
+</header>
+
+
+
+

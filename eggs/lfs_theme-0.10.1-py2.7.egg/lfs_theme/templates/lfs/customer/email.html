@@ -1,0 +1,29 @@
+{% extends "lfs/customer/base.html" %}
+{% load i18n lfs_tags %}
+
+{% block breadcrumbs %}
+    {% breadcrumbs _("Change your e-mail address") %}
+{% endblock %}
+
+{% block content %}
+    <h3>{% trans 'Change your e-mail address' %}</h3>
+    <form action="{% url 'lfs_my_email' %}"
+          method="post">
+        {% csrf_token %}
+
+        <div class="form-wrapper">
+            <div class="form">
+                {% lfs_form email_form %}
+            </div>
+        </div>
+
+        <input type="hidden"
+               name="action"
+               value="email" />
+
+        <input class="btn btn-primary"
+               type="submit"
+               value="{% trans 'Save e-mail address' %}" />
+
+    </form>
+{% endblock %}

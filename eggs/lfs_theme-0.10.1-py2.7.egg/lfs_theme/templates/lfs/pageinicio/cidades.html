@@ -1,0 +1,21 @@
+{% extends 'lfs/pageinicio/base.html' %}
+{% load static %}
+
+{% block cidade %}Cidades Disponiveis!{% endblock %}
+
+{% block conteudo %}
+    <div class="input-cnt">
+        <div class="group">
+            <a href="/"><button class="button voltar" type="submit">Voltar</button></a>
+        </div>
+    </div>
+    {% for estado in estados %}
+        {% for cidade in estado.cidade_set.all|dictsortreversed:"ativo"%}
+        <div class="input-cnt">
+            <div class="group">
+                <a href="{% if cidade.ativo %}{{ cidade.link }}{% else %}#{% endif %}"><button class="button" type="submit">{{ cidade.nome }} {% if not cidade.ativo %}<span class="embreve">"EM BREVE"</span>{% endif %}</button></a>
+            </div>
+        </div>
+        {% endfor %}
+    {% endfor %}
+{% endblock %}
