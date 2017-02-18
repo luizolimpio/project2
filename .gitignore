@@ -8,7 +8,7 @@ README.txt
 bin/
 bootstrap.py
 buildout.cfg
-#develop-eggs/
+develop-eggs/
 #eggs/
 lfs.log
 lfs_project/
@@ -16,5 +16,5 @@ sys
 zc.buildout.buildout
 gunicron_lfs_project
 System Volume Information/
-
-
+*.pyc
+parts/
