@@ -10,6 +10,12 @@
     }
 }
 
+@media only screen and (max-width: 365px) {
+    select#id_invoice-datanascimento_month {
+        width: 53px;
+    }
+}
+
 @media only screen and (max-width: 1023px) {
     .padding-right .middle-slot {
         width: auto;
@@ -828,4 +834,5 @@
     }
 
 }
+
 
